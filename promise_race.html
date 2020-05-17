@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script type="text/javascript" src="./jquery/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script>
+    Promise.all([
+        $.ajax({
+            url: './jquery/date/json.txt',
+            dataType: 'json'
+        }),
+        $.ajax({
+            url: './jquery/date/arr.txt',
+            dataType: 'json'
+        }),
+        $.ajax({
+            url: './jquery/date/num.txt',
+            dataType: 'json'
+        }),
+    ]).then(resoults => {
+        let [json, arr, num] = resoults;
+        alert('成功了');
+        console.log(json);
+        console.log(arr);
+        console.log(num);
+    }, function(error) {
+        alert('失败了');
+    });
+</script>
+
+<body>
+
+</body>
+
+</html>

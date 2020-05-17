@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script>
+    let arr = [1, 2, 3];
+
+    let a = arr[0];
+    let b = arr[1];
+    let c = arr[2];
+    /////////以上过于麻烦/////////////
+    let [a1, b1, c1] = [5, 6, 7]
+    let {
+        a2,
+        c2,
+        b2
+    } = {
+        a2: 12,
+        c2: 'frank',
+        b2: true
+    };
+
+    console.log(a, b, c); //可以同时输出a,b,c的值
+    // alert(a, b, c); //这样只输出-- -------a的值
+    console.log(a1, b1, c1);
+
+    console.log(a2, c2, b2);
+</script>
+
+<body>
+
+</body>
+
+</html>

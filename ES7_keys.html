@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script>
+    let arr = [12, 3, 45, 64, 26];
+    for (let key of arr.keys()) {
+        alert(key);
+    }
+    for (let value of arr.values()) {
+        alert(value);
+    }
+    for (let entry of arr.entries()) {
+        alert(entry);
+    }
+    for (let [key, value] of arr.entries()) {
+        alert(`${key}=${value}`);
+    }
+</script>
+
+</html>

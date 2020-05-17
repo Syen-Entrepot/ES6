@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script>
+    let a = 12;
+    let b = 4;
+    //原生js的写法
+    let json = {
+        a: a,
+        b: b,
+        c: 55
+    };
+    console.log(json);
+    //ES6的简写
+    let ajson = {
+        a, //参数的名字跟值一样
+        b, //参数的名字跟值一样
+        c: 55
+    }
+    console.log(ajson);
+    //原生js
+    let bjson = {
+        d: 14,
+        show: function() {
+            alert(this.d);
+        }
+    };
+
+    bjson.show();
+
+    //ES6简写-----省略function和冒号  ：
+    let cjson = {
+        e: 67,
+        show() {
+            alert(this.e);
+        }
+    };
+    cjson.show();
+</script>
+
+<body>
+
+</body>
+
+</html>

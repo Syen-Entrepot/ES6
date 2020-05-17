@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script>
+    // 普通的函数
+    // window.onload = function() {
+    //     alert('abc');
+    // };
+
+    //箭头函数
+    // window.onload = () => {
+    //     alert('abc');
+    // };
+
+    //普通函数
+    // let show = function(a,b) {
+    //         alert(a+b);
+    //     }
+    //箭头函数
+    let show = (a, b) => {
+        alert(a + b);
+    };
+    show(12, 6);
+
+
+    let arr = [22, 26, 8, 43, 12, 78, 34, 23, 65];
+    //普通的js函数排序
+    // arr.sort(function(n1, n2) {
+    //     return n1 - n2;
+    // });
+    //箭头函数
+    arr.sort((n1, n2) => n1 - n2);
+
+    alert(arr);
+</script>
+
+<body>
+
+</body>
+
+</html>

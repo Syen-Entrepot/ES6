@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script type="text/javascript" src="./jquery/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script>
+    // let p = $.ajax({
+    //     url: './jquery/date/json.txt',
+    //     dataType: 'json'
+    // });
+
+    // console.log(p);
+
+    Promise.all([
+        $.ajax({
+            url: './jquery/date/json.txt',
+            dataType: 'json'
+        }),
+        $.ajax({
+            url: './jquery/date/arr.txt',
+            dataType: 'json'
+        }),
+    ]).then(function(resoult) {
+        let [json, arr] = resoult;
+        alert('成功了');
+        console.log(json);
+        console.log(arr);
+    }, function(error) {
+        alert('失败了');
+    });
+</script>
+
+<body>
+
+</body>
+
+</html>

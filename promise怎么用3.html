@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script type="text/javascript" src="./jquery/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script>
+    function createPromise(url) {
+        return new Promise(function(resolve, reject) {
+            //异步代码
+            //resolve是Promise自带的两个参数之一表示成功了
+            //reject也是Promise自带的两个参数之一表示失败了
+            $.ajax({
+                url,
+                dataType: 'json',
+                success(arr) {
+                    resolve(arr);
+                },
+                error(err) {
+                    reject(err);
+                }
+            })
+
+        });
+
+    }
+
+    Promise.all([
+        createPromise('./jquery/date/arr.txt'),
+        createPromise('./jquery/date/json.txt')
+    ]).then(function(arr) {
+        let [res1, res2] = arr;
+        alert('全部都成功了' + arr);
+        alert(res1);
+        alert(res2);
+    }, function(err) {
+        alert('至少有一个失败了' + err);
+    })
+</script>
+
+<body>
+
+</body>
+
+</html>

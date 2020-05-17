@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script>
+    let b = 'http://www.baidu.com';
+    if (b.startsWith('http://')) {
+        alert("这是个普通网址");
+    } else if (b.startsWith('https://')) {
+        alert("这是个加密网址");
+    } else if (b.startsWith('git://')) {
+        alert("这是个git地址");
+    } else if (b.startsWith('svn://')) {
+        alert("这是个仓库地址");
+    } else {
+        alert("其他");
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
